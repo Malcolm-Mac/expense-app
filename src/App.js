@@ -11,9 +11,15 @@ const App = (props) => {
     { id: 'e3', title: 'Car Insurance', amount: 294.67, date: new Date(2021, 2, 28) },
     { id: 'e4', title: 'New Desk (Wooden)', amount: 450, date: new Date(2021, 5, 12) },
   ];
+
+  const onAddExpenseHandler = (newItems)=>{
+    props.push(newItems)
+    console.log(props)
+  }
+
   return (
     <div className="App">
-      <NewExpense />
+      <NewExpense onAddExpense={onAddExpenseHandler}/>
       <Expenses items={props} />
     </div>
   );
