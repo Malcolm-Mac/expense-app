@@ -8,3 +8,7 @@
   .no_expense_found{
     color: #fff;
   }
+
+  li{
+    list-style: none;
+  }
